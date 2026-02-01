@@ -100,6 +100,7 @@ namespace CollectDataAudio
                         // int ng = TryParseInt(parts[3]);
                         int dailyPlan = TryParseInt(parts[4]);
                         string serialNumber = parts[5].Trim();
+                        int sut = TryParseInt(parts[6]);
                         string checkQuery = "";
                         object param = null;
 
@@ -110,8 +111,8 @@ namespace CollectDataAudio
                         }
                         else
                         {
-                            checkQuery = $"SELECT COUNT(1) FROM {tableName} WHERE DateTime = @DateTime AND Model = @Model AND Target = @Target AND Actual = @Actual";
-                            param = new { DateTime = fileDate, Model = model, Target = target, Actual = actual };
+                            checkQuery = $"SELECT COUNT(1) FROM {tableName} WHERE DateTime = @DateTime AND Model = @Model AND Target = @Target AND Actual = @Actual AND Sut = @Sut";
+                            param = new { DateTime = fileDate, Model = model, Target = target, Actual = actual, Sut = sut };
                         }
 
                         int exists = await db.ExecuteScalarAsync<int>(checkQuery, param);
@@ -127,7 +128,8 @@ namespace CollectDataAudio
                             DailyPlan = dailyPlan,
                             Weight = null,
                             Efficiency = null,
-                            SerialNumber = serialNumber
+                            SerialNumber = serialNumber,
+                            Sut = sut
                         });
                     }
 
@@ -135,16 +137,16 @@ namespace CollectDataAudio
                     {
                         string insertQuery = $@"
                     INSERT INTO {tableName} 
-                    (DateTime, Model, DailyPlan, Target, Actual, Weight, Efficiency, SerialNumber)
+                    (DateTime, Model, DailyPlan, Target, Actual, Weight, Efficiency, SerialNumber, Sut)
                     VALUES 
-                    (@DateTime, @Model, @DailyPlan, @Target, @Actual, @Weight, @Efficiency, @SerialNumber)";
+                    (@DateTime, @Model, @DailyPlan, @Target, @Actual, @Weight, @Efficiency, @SerialNumber, @Sut)";
 
                         await db.ExecuteAsync(insertQuery, dataToInsert);
                         _logger.LogInformation($"Berhasil insert {dataToInsert.Count} data dari {fileName}");
                     }
                 }
 
-                File.Copy(filePath, destFile, true); 
+                File.Copy(filePath, destFile, true);
                 File.SetLastWriteTime(destFile, File.GetLastWriteTime(filePath));
             }
             catch (Exception ex)
