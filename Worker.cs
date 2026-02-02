@@ -141,8 +141,14 @@ namespace CollectDataAudio
                     VALUES 
                     (@DateTime, @Model, @DailyPlan, @Target, @Actual, @Weight, @Efficiency, @SerialNumber, @Sut)";
 
-                        await db.ExecuteAsync(insertQuery, dataToInsert);
-                        _logger.LogInformation($"Berhasil insert {dataToInsert.Count} data dari {fileName}");
+                        if (dataToInsert.Count > 0)
+                        {
+                            await db.ExecuteAsync(insertQuery, dataToInsert);
+                            _logger.LogInformation($"Berhasil insert {dataToInsert.Count} data dari {fileName}");
+                        }
+
+                        await ProcessLossTimeFromProductionAsync(tableName);
+
                     }
                 }
 
@@ -160,6 +166,75 @@ namespace CollectDataAudio
         {
             if (int.TryParse(input, out int result)) return result;
             return 0;
+        }
+
+        public async Task ProcessLossTimeFromProductionAsync(string tableName)
+        {
+            try
+            {
+                string sqlFetch = $@"
+            SELECT TOP 2 [DateTime], [Sut] 
+            FROM [{tableName}] 
+            ORDER BY [ID] DESC";
+
+                using (SqlConnection connection = new SqlConnection(_connectionString))
+                {
+                    await connection.OpenAsync();
+                    DateTime? currentDT = null;
+                    DateTime? previousDT = null;
+                    double sut = 0;
+
+                    using (SqlCommand cmd = new SqlCommand(sqlFetch, connection))
+                    using (SqlDataReader rdr = await cmd.ExecuteReaderAsync())
+                    {
+                        if (await rdr.ReadAsync())
+                        {
+                            currentDT = rdr.GetDateTime(0);
+                            sut = rdr.IsDBNull(1) ? 0 : Convert.ToDouble(rdr.GetValue(1));
+                        }
+                        if (await rdr.ReadAsync())
+                        {
+                            previousDT = rdr.GetDateTime(0);
+                        }
+                    }
+
+                    if (currentDT.HasValue && previousDT.HasValue)
+                    {
+                        double diff = (currentDT.Value - previousDT.Value).TotalSeconds;
+                        double netLoss = diff - sut;
+
+                        _logger.LogInformation($"[CHECK] {tableName}: Diff {diff}s - Sut {sut}s = Net {netLoss}s");
+
+                        if (netLoss > 0)
+                        {
+                            // Cek duplikasi agar tidak insert data yang sama berkali-kali
+                            string checkSql = "SELECT COUNT(1) FROM AssemblyLossTime WHERE EndDateTime = @End AND MachineCode = @MC";
+                            int exists = await connection.QueryFirstOrDefaultAsync<int>(checkSql, new { End = currentDT, MC = tableName });
+
+                            if (exists == 0)
+                            {
+                                string sqlInsert = @"
+                            INSERT INTO AssemblyLossTime (Date, MachineCode, Time, LossTime, EndDateTime)
+                            VALUES (@Date, @MC, @Time, @LT, @End)";
+
+                                await connection.ExecuteAsync(sqlInsert, new
+                                {
+                                    Date = currentDT.Value.Date,
+                                    MC = tableName,
+                                    Time = previousDT.Value.TimeOfDay,
+                                    LT = (int)netLoss,
+                                    End = currentDT.Value
+                                });
+                                _logger.LogInformation($"[SUCCESS] LossTime tercatat untuk {tableName}: {netLoss} detik");
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Gagal hitung LossTime {tableName}: {ex.Message}");
+            }
         }
     }
 }

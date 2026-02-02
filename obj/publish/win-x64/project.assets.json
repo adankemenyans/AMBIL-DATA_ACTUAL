@@ -4096,11 +4096,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\CollectDataAudio\\CollectDataAudio.csproj",
+      "projectUniqueName": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\AMBIL-DATA_ACTUAL\\CollectDataAudio.csproj",
       "projectName": "CollectDataAudio",
-      "projectPath": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\CollectDataAudio\\CollectDataAudio.csproj",
+      "projectPath": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\AMBIL-DATA_ACTUAL\\CollectDataAudio.csproj",
       "packagesPath": "C:\\Users\\mghaz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\CollectDataAudio\\obj\\publish\\win-x64\\",
+      "outputPath": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\AMBIL-DATA_ACTUAL\\obj\\publish\\win-x64\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
