@@ -10,6 +10,7 @@
         public decimal? Weight { get; set; }
         public decimal? Efficiency { get; set; }
         public string SerialNumber { get; set; }
+        public int Sut { get; set; }
     }
 
     public class LineConfig

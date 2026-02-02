@@ -121,7 +121,7 @@ namespace CollectDataAudio
 
                         dataToInsert.Add(new ProductionData
                         {
-                            DateTime = fileDate,
+                            DateTime = DateTime.Now,
                             Model = model,
                             Target = target,
                             Actual = actual,

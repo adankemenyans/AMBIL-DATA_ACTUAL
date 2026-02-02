@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\CollectDataAudio\\",
+  "WorkspaceRootPath": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\AMBIL-DATA_ACTUAL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F9947E50-6919-4636-9645-7A30D7DB4E95}|CollectDataAudio.csproj|c:\\users\\mghaz\\magang panasonic\\dashboard bu\\audio\\collectdataaudio\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F9947E50-6919-4636-9645-7A30D7DB4E95}|CollectDataAudio.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9947E50-6919-4636-9645-7A30D7DB4E95}|CollectDataAudio.csproj|c:\\users\\mghaz\\magang panasonic\\dashboard bu\\audio\\collectdataaudio\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F9947E50-6919-4636-9645-7A30D7DB4E95}|CollectDataAudio.csproj|c:\\users\\mghaz\\magang panasonic\\dashboard bu\\audio\\ambil-data_actual\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9947E50-6919-4636-9645-7A30D7DB4E95}|CollectDataAudio.csproj|solutionrelative:worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9947E50-6919-4636-9645-7A30D7DB4E95}|CollectDataAudio.csproj|c:\\users\\mghaz\\magang panasonic\\dashboard bu\\audio\\collectdataaudio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9947E50-6919-4636-9645-7A30D7DB4E95}|CollectDataAudio.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9947E50-6919-4636-9645-7A30D7DB4E95}|CollectDataAudio.csproj|c:\\users\\mghaz\\magang panasonic\\dashboard bu\\audio\\ambil-data_actual\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F9947E50-6919-4636-9645-7A30D7DB4E95}|CollectDataAudio.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9947E50-6919-4636-9645-7A30D7DB4E95}|CollectDataAudio.csproj|c:\\users\\mghaz\\magang panasonic\\dashboard bu\\audio\\collectdataaudio\\productiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F9947E50-6919-4636-9645-7A30D7DB4E95}|CollectDataAudio.csproj|c:\\users\\mghaz\\magang panasonic\\dashboard bu\\audio\\ambil-data_actual\\productiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9947E50-6919-4636-9645-7A30D7DB4E95}|CollectDataAudio.csproj|solutionrelative:productiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9947E50-6919-4636-9645-7A30D7DB4E95}|CollectDataAudio.csproj|c:\\users\\mghaz\\magang panasonic\\dashboard bu\\audio\\ambil-data_actual\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9947E50-6919-4636-9645-7A30D7DB4E95}|CollectDataAudio.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 27,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,51 +38,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\CollectDataAudio\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\AMBIL-DATA_ACTUAL\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\CollectDataAudio\\Program.cs",
+              "ToolTip": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\AMBIL-DATA_ACTUAL\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T04:11:02.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T04:11:02.059Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Worker.cs",
-              "DocumentMoniker": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\CollectDataAudio\\Worker.cs",
+              "DocumentMoniker": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\AMBIL-DATA_ACTUAL\\Worker.cs",
               "RelativeDocumentMoniker": "Worker.cs",
-              "ToolTip": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\CollectDataAudio\\Worker.cs",
+              "ToolTip": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\AMBIL-DATA_ACTUAL\\Worker.cs",
               "RelativeToolTip": "Worker.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAkwJIAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAhwH8AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T03:46:48.903Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ProductionData.cs",
-              "DocumentMoniker": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\CollectDataAudio\\ProductionData.cs",
+              "DocumentMoniker": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\AMBIL-DATA_ACTUAL\\ProductionData.cs",
               "RelativeDocumentMoniker": "ProductionData.cs",
-              "ToolTip": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\CollectDataAudio\\ProductionData.cs",
+              "ToolTip": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\AMBIL-DATA_ACTUAL\\ProductionData.cs",
               "RelativeToolTip": "ProductionData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T03:45:12.059Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\CollectDataAudio\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\AMBIL-DATA_ACTUAL\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\CollectDataAudio\\appsettings.json",
+              "ToolTip": "C:\\Users\\mghaz\\Magang Panasonic\\Dashboard BU\\Audio\\AMBIL-DATA_ACTUAL\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAB4AAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-12-04T03:36:06.088Z",
               "EditorCaption": ""
